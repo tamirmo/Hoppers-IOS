@@ -95,7 +95,6 @@ public class LevelLogic{
         solution: [Hop],
         
         // The record time the user solved the level
-        // (null if not yet solved)
         recordSeconds: Int,
         recordMinutes: Int,
         recordHours: Int,

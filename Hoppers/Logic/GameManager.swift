@@ -474,22 +474,6 @@ class GameManager : LevelsLoadedDelegate{
         return difficultyLevels
     }
     
-    public func getRandomLevel(difficulty: Difficulty) -> Int{
-        var chosenDifficultyLevels: [LevelLogic] = getLevelsByDifficulty(difficulty: difficulty)
-    
-        // Choosing a random level:
-    
-        let levelListIndex: Int = random(chosenDifficultyLevels.count)
-        let chosenLevel: LevelLogic = chosenDifficultyLevels[levelListIndex]
-    
-        return chosenLevel.Id
-    }
-    
-    private func random(_ n:Int) -> Int
-    {
-        return Int(arc4random_uniform(UInt32(n)))
-    }
-    
     // MARK: - LevelsLoadedDelegate
     
     // Called when the levels loader has finished loading levels from the database
